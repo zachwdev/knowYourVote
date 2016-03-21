@@ -3,7 +3,7 @@ var request = require('request'),
     objectID = require('mongodb').ObjectID,
     cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser'),
-    express = require('express');
+    express = require('express')
 
 var app = express();
 
@@ -16,7 +16,7 @@ function getPoliticianCollection() {
         },
         function (error, res, body) {
             if (!error && res.statusCode == 200)
-            var data = JSON.parse(body);
+                var data = JSON.parse(body);
             var dbData = data.records
             console.log(dbData);
             var url = 'mongodb://localhost:27017/knowYourVote';
